@@ -23,7 +23,7 @@ const Cocktails = () => {
       ease: "expo.out",
       scrollTrigger: {
         trigger: "#cocktails",
-        start: "top 85%",
+        start: "top 100%",
         end: "bottom 80%",
         scrub: true,
       },
@@ -41,7 +41,7 @@ const Cocktails = () => {
       ease: "expo.out",
       scrollTrigger: {
         trigger: "#cocktails",
-        start: "top 85%",
+        start: "top 100%",
         end: "bottom 80%",
         scrub: true,
       },
