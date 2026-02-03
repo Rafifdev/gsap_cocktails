@@ -1,12 +1,32 @@
 import { useGSAP } from "@gsap/react";
 import { SplitText } from "gsap/all";
 import gsap from "gsap";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useMediaQuery } from "react-responsive";
 
 const Hero = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const isMobile = useMediaQuery({ maxWidth: 767 });
+  const [videoSrc, setVideoSrc] = useState(""); 
+
+  useEffect(() => {
+    const fetchVideo = async () => {
+      try {
+        const req = await fetch("/videos/output.mp4");
+        const blob = await req.blob();
+        const url = URL.createObjectURL(blob);
+        setVideoSrc(url);
+      } catch (error) {
+        console.error("Gagal load video", error);
+      }
+    };
+
+    fetchVideo();
+
+    return () => {
+      if (videoSrc) URL.revokeObjectURL(videoSrc);
+    };
+  }, []);
 
   useGSAP(() => {
     const heroSplit = new SplitText(".title", { type: "chars, words" });
@@ -116,7 +136,7 @@ const Hero = () => {
       <div className="video absolute inset-0">
         <video
           ref={videoRef}
-          src="/videos/output.mp4"
+          src={videoSrc}
           muted
           playsInline
           preload="auto"
