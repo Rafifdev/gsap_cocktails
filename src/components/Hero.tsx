@@ -5,7 +5,7 @@ import { useRef } from "react";
 import { useMediaQuery } from "react-responsive";
 
 const Hero = () => {
-  const videoRef = useRef();
+  const videoRef = useRef<HTMLVideoElement>(null);
   const isMobile = useMediaQuery({ maxWidth: 767 });
 
   useGSAP(() => {
@@ -31,6 +31,14 @@ const Hero = () => {
       delay: 1,
     });
 
+    gsap.from(".cus-animation", {
+      opacity: 0,
+      yPercent: 100,
+      duration: 1.8,
+      ease: "expo.out",
+      delay: 1,
+    });
+
     gsap
       .timeline({
         scrollTrigger: {
@@ -48,20 +56,22 @@ const Hero = () => {
 
     // Video timeline animation
     const tl = gsap.timeline({
-        scrollTrigger: {
-            trigger: 'video',
-            start: startValue,
-            end: endValue,
-            scrub: true,
-            pin: true,
-        }
+      scrollTrigger: {
+        trigger: "video",
+        start: startValue,
+        end: endValue,
+        scrub: true,
+        pin: true,
+      },
     });
 
-    videoRef.current.onloadedmetadata = () => {
-        tl.to(videoRef.current, {
-            currentTime: videoRef.current.duration
-        })
-    }
+    if (!videoRef.current) return;
+
+    videoRef.current!.onloadedmetadata = () => {
+      tl.to(videoRef.current, {
+        currentTime: videoRef.current!.duration,
+      });
+    };
   }, []);
 
   return (
@@ -83,7 +93,7 @@ const Hero = () => {
         <div className="body">
           <div className="content">
             <div className="space-y-5 hidden md:block">
-              <p>Cool. Crisp. Clasic.</p>
+              <p className="cus-animation">Cool. Crisp. Clasic.</p>
               <p className="subtitle">
                 Sip The Spirit <br /> of Summer
               </p>
@@ -95,7 +105,9 @@ const Hero = () => {
                 creative flair, and timeless recipes - designed to delight your
                 sense.
               </p>
-              <a href="#cocktails">View Cocktails</a>
+              <a href="#cocktails" className="cus-animation">
+                View Cocktails
+              </a>
             </div>
           </div>
         </div>
