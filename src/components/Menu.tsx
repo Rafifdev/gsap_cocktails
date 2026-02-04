@@ -13,7 +13,7 @@ const Menu = () => {
     setCurrentIndex(newIndex);
   };
 
-  const getCocktailAt = (indexOffset) => {
+  const getCocktailAt = (indexOffset: number) => {
     return allCocktails[
       (currentIndex + indexOffset + totalCocktails) % totalCocktails
     ];
