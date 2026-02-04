@@ -111,7 +111,7 @@ const Hero = () => {
           className="right-leaf"
         />
 
-        <div className="body">
+        <div className="body lg:px-10">
           <div className="content">
             <div className="space-y-5 hidden md:block">
               <p className="cus-animation">Cool. Crisp. Clasic.</p>

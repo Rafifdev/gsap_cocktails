@@ -257,7 +257,7 @@ body {
 
     .masked-container {
       h2 {
-        @apply text-4xl md:text-5xl font-modern-negra text-center mb-10 text-white mt-32;
+        @apply text-4xl md:text-5xl font-modern-negra text-center mb-10 text-white mt-40;
       }
 
       div {
