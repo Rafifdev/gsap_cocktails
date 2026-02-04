@@ -7,7 +7,7 @@ import { useMediaQuery } from "react-responsive";
 const Hero = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const isMobile = useMediaQuery({ maxWidth: 767 });
-  const [videoSrc, setVideoSrc] = useState(""); 
+  const [videoSrc, setVideoSrc] = useState("");
 
   useEffect(() => {
     const fetchVideo = async () => {
@@ -26,6 +26,7 @@ const Hero = () => {
     return () => {
       if (videoSrc) URL.revokeObjectURL(videoSrc);
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useGSAP(() => {
