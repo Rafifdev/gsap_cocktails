@@ -45,7 +45,7 @@ const Navbar = () => {
       ease: "expo.out",
     })
     
-  });
+  }, []);
   return (
     <nav>
       <div className="lg:px-10">

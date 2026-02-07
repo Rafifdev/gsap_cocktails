@@ -20,6 +20,7 @@ const App = () => {
       <About />
       <Art />
       <Menu />
+      <div className="min-h-screen"></div>
     </main>
   );
 };

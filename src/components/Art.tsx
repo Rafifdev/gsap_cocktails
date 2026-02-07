@@ -58,6 +58,7 @@ const Art = () => {
               src="/images/under-img.jpg"
               alt="cocktail"
               className="abs-center masked-img size-full object-contain"
+              draggable="false"
             />
           </div>
 
