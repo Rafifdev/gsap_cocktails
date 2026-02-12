@@ -1,73 +1,72 @@
-# React + TypeScript + Vite
+# 🍹 GSAP Cocktails
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern and interactive cocktail website built with **React**, **Tailwind CSS**, and powered by advanced animations from **GSAP (GreenSock Animation Platform)**. This project demonstrates high-performance web animations to create an immersive user experience.
 
-Currently, two official plugins are available:
+<div align="center">
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### 🚀 [**View Live Demo**](https://gsapcocktails.vercel.app/)
 
-## React Compiler
+<img width="1896" height="970" alt="image" src="https://github.com/user-attachments/assets/56bc4bee-4d7a-4b1c-bf79-a6842e6c72a2" />
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## Expanding the ESLint configuration
+</div>
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🚀 About The Project
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+This project aims to showcase various types of cocktails with an elegant interface. The primary focus of development is the implementation of complex, smooth, and responsive animations using GSAP to bring the user interface to life.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## 🛠️ Tech Stack
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- **Framework:** [React.js](https://react.dev/)
+- **Styling:** [Tailwind CSS](https://tailwindcss.com/)
+- **Animation:** [GSAP](https://gsap.com/) (ScrollTrigger, SplitText, etc.)
+- **Build Tool:** [Vite](https://vitejs.dev/)
+- **Deployment:** [Vercel](https://vercel.com/)
+
+## ✨ Key Features
+
+- **ScrollTrigger Animations:** Elements dynamically appear and move as the user scrolls through the page.
+- **Parallax Effects:** Adds visual depth to images and backgrounds for a premium feel.
+- **Smooth Text Transitions:** Utilizes split-text techniques for stylish typography reveals.
+- **Responsive Design:** Optimized layout for desktops, tablets, and mobile devices.
+- **High Performance:** Built with Vite for fast loading times.
+
+## 📦 Installation & Setup
+
+Follow these steps to run the project locally on your machine:
+
+### 1. Clone the Repository
+Open your terminal and run the following command:
+
+```bash
+git clone [https://github.com/Rafifdev/gsap_cocktails.git](https://github.com/Rafifdev/gsap_cocktails.git)
+cd gsap_cocktails
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### 2. Install Dependencies
+Make sure you have Node.js installed. Then run:
+```bash
+npm install
+# or if using yarn
+yarn install
 ```
+
+### 3. Run the Development Server
+Start the project in development mode:
+```bash
+npm run dev
+# or
+yarn dev
+```
+Open your browser and visit http://localhost:5173 (or the port shown in your terminal) to see the result.
+
+🤝 Contribution
+Contributions are always welcome! If you have suggestions to improve this project, please create a Pull Request or open an Issue.
+
+Fork the project
+1. Create a new feature branch (git checkout -b feature-amazing)
+2. Commit your changes (git commit -m 'Add some amazing feature')
+3. Push to the branch (git push origin feature-amazing)
+4. Create a Pull Request
+
+<p align="center"> Made with ❤️ by <a href="https://www.google.com/search?q=https://github.com/Rafifdev">Rafifdev</a> </p>
