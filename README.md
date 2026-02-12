@@ -60,13 +60,12 @@ yarn dev
 ```
 Open your browser and visit http://localhost:5173 (or the port shown in your terminal) to see the result.
 
-🤝 Contribution
+## 🤝 Contribution
 Contributions are always welcome! If you have suggestions to improve this project, please create a Pull Request or open an Issue.
+- Fork the project
+- Create a new feature branch (git checkout -b feature-amazing)
+- Commit your changes (git commit -m 'Add some amazing feature')
+- Push to the branch (git push origin feature-amazing)
+- Create a Pull Request
 
-Fork the project
-1. Create a new feature branch (git checkout -b feature-amazing)
-2. Commit your changes (git commit -m 'Add some amazing feature')
-3. Push to the branch (git push origin feature-amazing)
-4. Create a Pull Request
-
-<p align="center"> Made with ❤️ by <a href="https://www.google.com/search?q=https://github.com/Rafifdev">Rafifdev</a> </p>
+## <p align="center"> Made with ❤️ by <a href="https://www.google.com/search?q=https://github.com/Rafifdev">Rafifdev</a> </p>
